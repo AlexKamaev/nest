@@ -18,3 +18,7 @@ Content-Type: application/json
 {
     "approved": true
 }
+
+
+### Get an estimate
+GET http://localhost:3000/reports?make=Toyota&model=Corolla&year=2020&lng=0&lat=0&mileage=15000
