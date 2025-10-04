@@ -10,3 +10,11 @@ Content-Type: application/json
     "lng": 0,
     "lat": 0
 }
+
+### Approve a report
+PATCH http://localhost:3000/reports/7
+Content-Type: application/json
+
+{
+    "approved": true
+}
