@@ -38,6 +38,7 @@ export class ReportsService {
     .andWhere('year = :year BETWEEN -3 AND 3', { year: estimateDto.year })
     .andWhere('lng - :lng BETWEEN -5 AND 5', { lng: estimateDto.lng })
     .andWhere('lat - :lat BETWEEN -5 AND 5', { lat: estimateDto.lat })
+    .andWhere('approved IS TRUE')
     .orderBy('mileage - :mileage', 'DESC')
     .setParameters({ mileage: estimateDto.mileage })
     .limit(3)
